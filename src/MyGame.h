@@ -8,11 +8,16 @@ class MyGame : public TomatoLib::Game
 {
 public:
 	TomatoLib::Window* Window;
+	TomatoLib::Vector2 BoxPosition;
+	TomatoLib::Vector2 BoxVelocity;
+
+	TomatoLib::Font Font;
 
 public:
 	MyGame();
 	~MyGame();
 
+	virtual void Init();
 	virtual void Update();
 	virtual void Draw(TomatoLib::Render& r);
 };
